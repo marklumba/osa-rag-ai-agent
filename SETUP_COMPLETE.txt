@@ -1,0 +1,66 @@
+🚀 ADK Hybrid RAG AI Agent - Web UI Setup Complete!
+
+✅ WHAT'S BEEN CREATED:
+
+📡 BACKEND (FastAPI)
+- File: backend.py
+- Port: 8000
+- Features: Chat API, File Upload, Agent Status
+- Integration: Direct calls to your ADK tools
+
+🌐 FRONTEND (React + TypeScript)  
+- Directory: adk-agent-ui/
+- Port: 3000
+- Features: Chat UI, Quick Actions, File Upload
+- Design: Clean, modern, responsive
+
+🛠️ QUICK START:
+
+1. START BACKEND:
+   cd "c:\Users\Mark Lumba\Documents\osa-rag-ai-agent"
+   python backend.py
+
+2. START FRONTEND (new terminal):
+   cd "c:\Users\Mark Lumba\Documents\osa-rag-ai-agent\adk-agent-ui"
+   npm start
+
+3. OPEN BROWSER:
+   http://localhost:3000
+
+🎯 FEATURES:
+
+📁 Document Search (RAG):
+- "list corpora" - Show document collections
+- "search [term]" - Search in documents
+- Works with your existing "personal" corpus
+
+📊 Data Analysis (Pandas):
+- Paste Google Drive URLs to load Excel/CSV
+- "calculate sum of revenue" - Perform calculations  
+- "show top 5 customers" - Query data
+- Natural language to pandas code
+
+🔧 TOOLS INTEGRATED:
+✓ list_corpora
+✓ rag_query  
+✓ load_dataframe
+✓ query_dataframe
+✓ execute_pandas_code
+✓ add_data
+✓ create_corpus
+
+💡 EXAMPLE USAGE:
+1. Type "list corpora" to see your document collections
+2. Paste: https://drive.google.com/file/d/your-file-id
+3. Ask: "what's the total revenue in Q3?"
+4. Search: "find mentions of market trends"
+
+🎨 UI FEATURES:
+- Real-time chat interface
+- Agent status indicator
+- Quick action buttons
+- File upload support
+- Mobile responsive
+- Clean, modern design
+
+The web UI now provides the same functionality as your ADK web environment but with a custom, interactive interface!

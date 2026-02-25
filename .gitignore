@@ -1,0 +1,33 @@
+# Secrets and environment
+.env
+.env.*
+!.env.example
+service-account-key.json
+*.pem
+*.p12
+*.pfx
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Local tooling
+.adk/
+.qodo/
+
+# Frontend
+adk-agent-ui/node_modules/
+adk-agent-ui/build/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

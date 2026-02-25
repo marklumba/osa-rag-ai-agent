@@ -1,0 +1,28 @@
+# virtual environments
+.venv/
+venv/
+
+# python cache
+__pycache__/
+*.pyc
+
+# node / build artifacts
+node_modules/
+.next/
+dist/
+
+# data (DO NOT DEPLOY)
+data/
+documents/
+corpus/
+uploads/
+embeddings/
+*.pdf
+*.csv
+*.xlsx
+*.json
+
+# env & git
+.env
+.git/
+.gitignore

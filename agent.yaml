@@ -1,0 +1,5 @@
+# agent.yaml
+name: "hybrid-rag-ai-agent"
+display_name: "Hybrid RAG AI Agent"
+# Point this to the python file that contains your reasoning engine
+entry_point: "rag_agent/agent.py"
