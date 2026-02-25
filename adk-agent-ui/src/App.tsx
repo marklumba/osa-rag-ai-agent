@@ -40,7 +40,7 @@ const App: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const API_BASE = 'https://rag-backend-13058804497.asia-southeast1.run.app';
+  // const API_BASE = 'https://rag-backend-3213124214.asia-southeast1.run.app';
   // const LOCAL_API_BASE = 'http://localhost:8000';
 
   useEffect(() => {
