@@ -124,7 +124,7 @@ adk deploy agent_engine rag_agent \
 After successful deployment, note the `REASONING_ENGINE_ID` from the output. You'll need this for the backend deployment.
 
 **Expected Output:**
-- Reasoning Engine ID (example: `4021309846962831360`)
+- Reasoning Engine ID (example: `452562646435235235`)
 - Deployment status confirmation
 - Agent endpoint information
 
@@ -154,7 +154,7 @@ gcloud run deploy rag-backend ^
   --image gcr.io/osa-rag-ai-agent/rag-backend ^
   --region asia-southeast1 ^
   --allow-unauthenticated ^
-  --set-env-vars GOOGLE_CLOUD_PROJECT=osa-rag-ai-agent,GOOGLE_CLOUD_LOCATION=asia-southeast1,REASONING_ENGINE_ID=4021309846962831360 ^
+  --set-env-vars GOOGLE_CLOUD_PROJECT=osa-rag-ai-agent,GOOGLE_CLOUD_LOCATION=asia-southeast1,REASONING_ENGINE_ID=452562646435235235 ^
   --timeout 300s
 ```
 
@@ -164,14 +164,14 @@ gcloud run deploy rag-backend \
   --image gcr.io/osa-rag-ai-agent/rag-backend \
   --region asia-southeast1 \
   --allow-unauthenticated \
-  --set-env-vars GOOGLE_CLOUD_PROJECT=osa-rag-ai-agent,GOOGLE_CLOUD_LOCATION=asia-southeast1,REASONING_ENGINE_ID=4021309846962831360 \
+  --set-env-vars GOOGLE_CLOUD_PROJECT=osa-rag-ai-agent,GOOGLE_CLOUD_LOCATION=asia-southeast1,REASONING_ENGINE_ID=452562646435235235 \
   --timeout 300s
 ```
 
 **Important:** Replace `4021309846962831360` with your actual Reasoning Engine ID from Step 1.
 
 **Expected Output:**
-- Service URL (example: `https://rag-backend-13058804497.asia-southeast1.run.app`)
+- Service URL (example: `https://rag-backend-525626464.asia-southeast1.run.app`)
 - Deployment status
 
 #### Test the Backend
@@ -180,21 +180,21 @@ Test the status endpoint:
 
 **Windows Command Prompt:**
 ```cmd
-curl -X POST "https://rag-backend-13058804497.asia-southeast1.run.app/api/status"
+curl -X POST "https://rag-backend-525626464.asia-southeast1.run.app/api/status"
 ```
 
 Test the chat endpoint:
 
 **Windows Command Prompt:**
 ```cmd
-curl -X POST "https://rag-backend-13058804497.asia-southeast1.run.app/api/chat" ^
+curl -X POST "https://rag-backend-525626464.asia-southeast1.run.app/api/chat" ^
   -H "Content-Type: application/json" ^
   -d "{\"message\":\"Hello, just say hi back\"}"
 ```
 
 **Linux/macOS:**
 ```bash
-curl -X POST "https://rag-backend-13058804497.asia-southeast1.run.app/api/chat" \
+curl -X POST "https://rag-backend-525626464.asia-southeast1.run.app/api/chat" \
   -H "Content-Type: application/json" \
   -d '{"message":"Hello, just say hi back"}'
 ```
@@ -228,13 +228,13 @@ Build the image with the backend API URL as a build argument:
 **Windows Command Prompt:**
 ```cmd
 docker build -t gcr.io/osa-rag-ai-agent/rag-frontend ^
-  --build-arg REACT_APP_API_URL=https://rag-backend-13058804497.asia-southeast1.run.app .
+  --build-arg REACT_APP_API_URL=https://rag-backend-525626464.asia-southeast1.run.app .
 ```
 
 **Linux/macOS:**
 ```bash
 docker build -t gcr.io/osa-rag-ai-agent/rag-frontend \
-  --build-arg REACT_APP_API_URL=https://rag-backend-13058804497.asia-southeast1.run.app .
+  --build-arg REACT_APP_API_URL=https://rag-backend-525626464.asia-southeast1.run.app .
 ```
 
 **Important:** Replace the URL with your actual backend URL from Step 2.
@@ -268,7 +268,7 @@ gcloud run deploy rag-frontend \
 ```
 
 **Expected Output:**
-- Service URL for the frontend (example: `https://rag-frontend-13058804497.asia-southeast1.run.app`)
+- Service URL for the frontend (example: `https://rag-frontend-1243423535.asia-southeast1.run.app`)
 - Deployment status
 
 ## Post-Deployment Verification
@@ -352,7 +352,7 @@ gcloud run deploy rag-backend --image gcr.io/osa-rag-ai-agent/rag-backend --regi
 
 ```cmd
 cd adk-agent-ui
-docker build -t gcr.io/osa-rag-ai-agent/rag-frontend --build-arg REACT_APP_API_URL=https://rag-backend-13058804497.asia-southeast1.run.app .
+docker build -t gcr.io/osa-rag-ai-agent/rag-frontend --build-arg REACT_APP_API_URL=https://rag-backend-12341412341324.asia-southeast1.run.app .
 docker push gcr.io/osa-rag-ai-agent/rag-frontend
 gcloud run deploy rag-frontend --image gcr.io/osa-rag-ai-agent/rag-frontend --region asia-southeast1
 ```
